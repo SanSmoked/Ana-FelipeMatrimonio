@@ -307,6 +307,7 @@ body {
     text-align: center;
     border: 2px solid var(--border-gold);
     border-radius: 50px;
+    margin-top: 70px;
 }
 
 .card-image {
@@ -415,7 +416,6 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 75px;
-    margin-top: -110px;
     width: 100vw;
 }
 
@@ -496,11 +496,10 @@ body {
 ============================================================ */
 .confirmation-section {
     background-color: var(--cream);
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-direction: column;
-    padding-top: 75px;
-    margin-top: -110px;
+    padding-top: 30px;
     width: 100vw;
 }
 
@@ -698,15 +697,6 @@ body {
 
 
 
-
-
-
-
-.nosotros-section {
-    background-color: #EAE5E1;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
 
 .footer {
     background-color: #EAE5E1;

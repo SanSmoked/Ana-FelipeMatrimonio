@@ -121,12 +121,12 @@ function updateDate(){
 }
 function openGoogleMaps(place) {
     var url = '';
-    if (place == 1) {
-        // url iglesia
-        url = 'https://maps.app.goo.gl/uU6gNxNgXgyWSEG48';
+    if (place === 'ceremony') {
+        // url church
+        url = 'https://share.google/V8WIdjFXLTHxa2UcO';
     } else {
-        //url contuamor
-        url = 'https://maps.app.goo.gl/xJYrZ68oeZJgs49EA';
+        //url celebration place
+        url = 'https://maps.app.goo.gl/HqSbQ379gmjXGsgJ83';
     }
     window.location.href = url;
 }

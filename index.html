@@ -109,7 +109,6 @@
         GALERY
         ================================== -->
         <section class="container">
-            <img src="./image/flowers2.png" class="countdown-flowers-up" alt="">
             <section class="nosotros-section">
                 <div class="nosotros-header">
                     <h2 class="nosotros-title">Retratos de nuestro amor</h2>
@@ -135,7 +134,6 @@
                     </div>
                 </div>
             </section>
-            <img src="./image/flowers2.png" class="countdown-flowers-down" alt="">
         </section>
 
         <!-- =============================
@@ -164,7 +162,7 @@
         CONFIRMATION CARD
         ================================== -->
         <section class="container">
-            <img src="./image/flowers2.png" class="countdown-flowers-up" alt="">
+            <!-- <img src="./image/flowers2.png" class="countdown-flowers-up" alt=""> -->
             <section class="confirmation-section">
                 <div class="nosotros-header">
                     <h2 class="nosotros-title">Confirmación</h2>
@@ -173,7 +171,19 @@
                 </div>
                 <button class="card-btn" onclick="confirmation()">Confirmar Asistencia</button>
             </section>
-            <img src="./image/flowers2.png" class="countdown-flowers-down" alt="">
+            <!-- <img src="./image/flowers2.png" class="countdown-flowers-down" alt=""> -->
+        </section>
+
+        <!-- =============================
+        FINAL MESSAGE
+        ================================== -->
+        <section class="container hero-section">
+            <div class="header-title header">
+                <div class="appear-on-load">Ana</div>
+                <div class="hero-ampersand appear-on-load" style="font-size: 8vw">&</div>
+                <div class="appear-on-load">Felipe</div>
+            </div>
+            <div class="header-subtitle header appear-on-load">Los esperamos</div>
         </section>
 
         <!-- ============================================================
@@ -199,22 +209,6 @@
             </div>
         </div>
 
-        <!-- SUGERIR CANCIÓN -->
-        <div class="modal-overlay" id="music-modal" onclick="closeModalOutside(event, 'music-modal')">
-            <div class="modal-card">
-                <button class="modal-close" onclick="closeModal('music-modal')">✕</button>
-                <div class="modal-top-icon">🎵</div>
-                <h3 class="modal-title">Sugerir Canción</h3>
-                <div class="modal-divider"></div>
-                <div class="modal-form">
-                    <input class="modal-input" type="text" placeholder="Ingrese su nombre completo" id="song-name">
-                    <input class="modal-input" type="text" placeholder="Nombre de la canción y autor" id="song-title">
-                    <input class="modal-input" type="text" placeholder="Link de YouTube (opcional)" id="song-link">
-                    <button class="card-btn modal-submit-btn" onclick="submitSong()">Sugerir Canción</button>
-                </div>
-            </div>
-        </div>
-
         <!-- REGALOS -->
         <div class="modal-overlay" id="gifts-modal" onclick="closeModalOutside(event, 'gifts-modal')">
             <div class="modal-card">
@@ -232,22 +226,6 @@
             </div>
         </div>
 
-        <!-- TIPS Y NOTAS -->
-        <div class="modal-overlay" id="tips-modal" onclick="closeModalOutside(event, 'tips-modal')">
-            <div class="modal-card">
-                <button class="modal-close" onclick="closeModal('tips-modal')">✕</button>
-                <div class="modal-top-icon">📋</div>
-                <h3 class="modal-title">Tips y Notas</h3>
-                <div class="modal-divider"></div>
-                <p class="modal-text">
-                    • ¡Por favor ser puntuales!<br><br>
-                    • Queremos que disfrutes de esta fiesta al máximo, por eso decidimos que sea un evento sólo para adultos.<br><br>
-                    • ¡Confirmar asistencia a la brevedad, antes del 1 de Agosto!<br><br>
-                    • Llevar algo de abrigo para disfrutar de los espacios exteriores.<br><br>
-                    • ¡Olvidarse de todo y a disfrutar!!!
-                </p>
-            </div>
-        </div>
     </div>
     <!-- <div class="image-container">
         <img class="logo-header" src="images/logo.png" alt="">
