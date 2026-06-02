@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Ana & Felipe" />
+    <meta property="og:description" content="Invitación a nuestro matrimonio" />
+    <meta property="og:type" content="website" />
+    <title>Ana & Felipe</title>
+    <link rel="stylesheet" href="./stylesClaudio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================================================
+         DESKTOP BLOCKER
+    ============================================================ -->
+    <div class="desktop-view">
+        <div class="desktop-container">
+            <div class="desktop-logo-text">Ana & Felipe</div>
+            <div>Por favor abre la invitación desde tu celular</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         HERO / PORTADA
+    ============================================================ -->
+    <section class="image-container">
+        <img src="./image/backgroundImage.jpeg" alt="Fondo">
+        <div class="image-overlay"></div>
+    </section>
+
+    <section class="container hero-section">
+        <div class="hero-names header appear-on-load" style="animation-delay:0.2s">Ana</div>
+        <div class="hero-ampersand header appear-on-load" style="animation-delay:0.5s">&</div>
+        <div class="hero-names header appear-on-load" style="animation-delay:0.8s">Felipe</div>
+        <div class="hero-subtitle header appear-on-load" style="animation-delay:1.1s">¡Nuestra boda!</div>
+        <div class="hero-quote header appear-on-load" style="animation-delay:1.4s">Te elijo hoy y por el resto de mi vida</div>
+        <div class="scroll-indicator appear-on-load" style="animation-delay:2s">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SAVE THE DATE / FECHA
+    ============================================================ -->
+    <section class="date-hero-section fade-in-section">
+        <div class="date-hero-inner">
+            <div class="date-names">Ana & Felipe</div>
+            <div class="date-big-number">15</div>
+            <div class="date-big-month">AGOSTO</div>
+            <div class="date-big-number">2025</div>
+            <div class="date-label">Save the date</div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         COUNTDOWN
+    ============================================================ -->
+    <section class="countdown-wrapper fade-in-section">
+        <div class="countdown-flowers-top">
+            <img src="./image/flowers2.png" alt="">
+        </div>
+        <div class="countdown-section">
+            <div class="countdown-text">Faltan</div>
+            <div class="countdown-container">
+                <div class="countdown-item-box">
+                    <b class="countdown-item" id="days">00</b>
+                    <div class="countdown-item-text">Días</div>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item-box">
+                    <b class="countdown-item" id="hours">00</b>
+                    <div class="countdown-item-text">Horas</div>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item-box">
+                    <b class="countdown-item" id="minutes">00</b>
+                    <div class="countdown-item-text">Minutos</div>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-item-box">
+                    <b class="countdown-item" id="seconds">00</b>
+                    <div class="countdown-item-text">Segundos</div>
+                </div>
+            </div>
+        </div>
+        <div class="countdown-flowers-bottom">
+            <img src="./image/flowers2.png" alt="">
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CEREMONIA CARD
+    ============================================================ -->
+    <section class="card-section fade-in-section">
+        <div class="event-card">
+            <div class="card-icon">💍</div>
+            <h2 class="card-title">CEREMONIA</h2>
+            <div class="card-divider"></div>
+            <div class="card-month">AGOSTO</div>
+            <div class="card-date-row">
+                <span class="card-day-label">SÁBADO</span>
+                <span class="card-day-number">15</span>
+                <span class="card-time">2:30 PM</span>
+            </div>
+            <div class="card-year">2025</div>
+            <div class="card-divider"></div>
+            <div class="card-place">Batallón Juan De Dios Cañas</div>
+            <button class="card-btn" onclick="openGoogleMaps('ceremony')">¿Cómo llegar?</button>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         RECEPCIÓN CARD
+    ============================================================ -->
+    <section class="card-section fade-in-section">
+        <div class="event-card">
+            <div class="card-icon">🥂</div>
+            <h2 class="card-title">RECEPCIÓN</h2>
+            <div class="card-divider"></div>
+            <div class="card-month">AGOSTO</div>
+            <div class="card-date-row">
+                <span class="card-day-label">SÁBADO</span>
+                <span class="card-day-number">15</span>
+                <span class="card-time">5:00 PM</span>
+            </div>
+            <div class="card-year">2025</div>
+            <div class="card-divider"></div>
+            <div class="card-place">Lugar de Recepción<br>Medellín, Colombia</div>
+            <button class="card-btn" onclick="openGoogleMaps('reception')">¿Cómo llegar?</button>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         NOSOTROS / GALERÍA
+    ============================================================ -->
+    <section class="nosotros-section fade-in-section">
+        <div class="nosotros-header">
+            <h2 class="nosotros-title">Retratos de nuestro amor</h2>
+            <p class="nosotros-subtitle">La clave es disfrutar cada momento</p>
+            <div class="nosotros-icon">📷</div>
+        </div>
+        <div class="gallery-slider" id="gallery-slider">
+            <div class="gallery-track" id="gallery-track">
+                <div class="gallery-slide">
+                    <img src="./image/nosotros1.png" alt="Nosotros">
+                </div>
+                <div class="gallery-slide">
+                    <img src="./image/nosotros2.png" alt="Nosotros">
+                </div>
+                <div class="gallery-slide">
+                    <img src="./image/nosotros3.png" alt="Nosotros">
+                </div>
+            </div>
+            <div class="gallery-dots">
+                <span class="gallery-dot active" onclick="goToSlide(0)"></span>
+                <span class="gallery-dot" onclick="goToSlide(1)"></span>
+                <span class="gallery-dot" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         MENÚ DE SECCIONES INTERACTIVAS
+    ============================================================ -->
+    <section class="menu-section fade-in-section">
+        <div class="flowers-border-top">
+            <img src="./image/flowers2.png" alt="">
+        </div>
+        <div class="menu-grid">
+            <button class="menu-btn" onclick="openModal('dress-modal')">
+                <span class="menu-icon">🎀</span>
+                <span class="menu-label">Dress Code</span>
+            </button>
+            <button class="menu-btn" onclick="openModal('music-modal')">
+                <span class="menu-icon">🎵</span>
+                <span class="menu-label">Sugerir Canción</span>
+            </button>
+            <button class="menu-btn" onclick="openModal('gifts-modal')">
+                <span class="menu-icon">🎁</span>
+                <span class="menu-label">Regalos</span>
+            </button>
+            <button class="menu-btn" onclick="openModal('tips-modal')">
+                <span class="menu-icon">📋</span>
+                <span class="menu-label">Tips y Notas</span>
+            </button>
+        </div>
+        <div class="flowers-border-bottom">
+            <img src="./image/flowers2.png" alt="">
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONFIRMAR ASISTENCIA
+    ============================================================ -->
+    <section class="attendance-section fade-in-section">
+        <div class="attendance-inner">
+            <div class="attendance-icon-big">✉️</div>
+            <h2 class="attendance-title">CONFIRMAR ASISTENCIA</h2>
+            <p class="attendance-text">
+                Confirma tu asistencia a través de nuestro WhatsApp.<br><br>
+                Por favor confirmar <strong>antes del 1 de Agosto</strong>,<br>
+                de lo contrario, entenderemos que no podrás acompañarnos.
+            </p>
+            <button class="card-btn attend-btn" onclick="confirmation()">CONFIRMAR</button>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         COMPARTIR FOTOS
+    ============================================================ -->
+    <section class="photos-section fade-in-section">
+        <div class="flowers-border-top">
+            <img src="./image/flowers2.png" alt="">
+        </div>
+        <div class="photos-inner">
+            <h2 class="photos-title">Compartimos este día junto a ti</h2>
+            <p class="photos-subtitle">Comparte tus fotos y videos de este hermoso día</p>
+            <div class="qr-placeholder">
+                <div class="qr-inner">📷 QR</div>
+            </div>
+            <p class="qr-label">Escanea el código QR y sube tus fotos</p>
+            <button class="card-btn">Subir fotos</button>
+        </div>
+        <div class="flowers-border-bottom">
+            <img src="./image/flowers2.png" alt="">
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CIERRE / FOOTER
+    ============================================================ -->
+    <section class="closing-section fade-in-section">
+        <div class="closing-names">
+            <span>Ana</span>
+            <span class="closing-amp">&</span>
+            <span>Felipe</span>
+        </div>
+        <p class="closing-msg">¡Los esperamos!</p>
+        <div class="footer-verse">
+            Uno solo puede ser vencido, pero dos pueden resistir.<br>
+            ¡La cuerda de tres hilos no se rompe fácilmente!<br>
+            <em>(Eclesiastés 4:12)</em>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         MODALES
+    ============================================================ -->
+
+    <!-- DRESS CODE -->
+    <div class="modal-overlay" id="dress-modal" onclick="closeModalOutside(event, 'dress-modal')">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('dress-modal')">✕</button>
+            <div class="modal-top-icon">🎀</div>
+            <h3 class="modal-title">Dress Code</h3>
+            <p class="modal-subtitle">Vestimenta Formal</p>
+            <div class="modal-divider"></div>
+            <p class="modal-text">
+                <strong>Hombres:</strong> Traje formal con corbata<br><br>
+                <strong>Mujeres:</strong> Vestido largo<br><br>
+                El <strong>blanco, beige y gris</strong> están reservados para los novios.
+                Por favor elige <strong>otro color</strong> para tu vestido.<br><br>
+                Si necesitás inspiración, te compartimos algunas ideas:
+            </p>
+            <a href="#" class="modal-link">Ver enlace de inspiración</a>
+        </div>
+    </div>
+
+    <!-- SUGERIR CANCIÓN -->
+    <div class="modal-overlay" id="music-modal" onclick="closeModalOutside(event, 'music-modal')">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('music-modal')">✕</button>
+            <div class="modal-top-icon">🎵</div>
+            <h3 class="modal-title">Sugerir Canción</h3>
+            <div class="modal-divider"></div>
+            <div class="modal-form">
+                <input class="modal-input" type="text" placeholder="Ingrese su nombre completo" id="song-name">
+                <input class="modal-input" type="text" placeholder="Nombre de la canción y autor" id="song-title">
+                <input class="modal-input" type="text" placeholder="Link de YouTube (opcional)" id="song-link">
+                <button class="card-btn modal-submit-btn" onclick="submitSong()">Sugerir Canción</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- REGALOS -->
+    <div class="modal-overlay" id="gifts-modal" onclick="closeModalOutside(event, 'gifts-modal')">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('gifts-modal')">✕</button>
+            <div class="modal-top-icon">🎁</div>
+            <h3 class="modal-title">Regalos</h3>
+            <div class="modal-divider"></div>
+            <p class="modal-text">
+                Para quienes deseen hacer un regalo en efectivo, contaremos con sobres disponibles para depositar en el cofre. También pueden contribuir mediante:<br><br>
+                <strong>• Depósito bancario:</strong><br>
+                Cuenta: XXXX XXXX XXXX XXXX<br><br>
+                <strong>• Nequi / Daviplata:</strong><br>
+                Número: 300 000 0000
+            </p>
+        </div>
+    </div>
+
+    <!-- TIPS Y NOTAS -->
+    <div class="modal-overlay" id="tips-modal" onclick="closeModalOutside(event, 'tips-modal')">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('tips-modal')">✕</button>
+            <div class="modal-top-icon">📋</div>
+            <h3 class="modal-title">Tips y Notas</h3>
+            <div class="modal-divider"></div>
+            <p class="modal-text">
+                • ¡Por favor ser puntuales!<br><br>
+                • Queremos que disfrutes de esta fiesta al máximo, por eso decidimos que sea un evento sólo para adultos.<br><br>
+                • ¡Confirmar asistencia a la brevedad, antes del 1 de Agosto!<br><br>
+                • Llevar algo de abrigo para disfrutar de los espacios exteriores.<br><br>
+                • ¡Olvidarse de todo y a disfrutar!!!
+            </p>
+        </div>
+    </div>
+
+    <script src="scriptClaudio.js"></script>
+</body>
+</html>

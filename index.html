@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Ana & Felipe" />
+    <meta property="og:description" content="Invitación a nuestro matrimonio" />
+    <meta property="og:type" content="website" />
+    <title>Ana & Felipe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="desktop-view">
+        <div class="desktop-container">
+            <img class="desktop-logo" src="./image/logo.jpeg">
+            <div>Por favor abre la invitación desde tu celular</div>
+        </div>
+        <img class="desktop-image" src="./image/desktopMain.jpeg">
+    </div>
+    <div class="invitation-container">
+        <section class="image-container">
+            <img src="./image/backgroundImage.jpeg" alt="fondo">
+            <div class="image-overlay"></div>
+        </section>
+        <!-- ============================
+            HERO / PORTADA
+        ================================= -->
+        <section class="container hero-section">
+            <div class="header-title header">
+                <div class="appear-on-load" style="animation-delay:0.4s">Ana</div>
+                <div class="hero-ampersand appear-on-load" style="font-size: 8vw; animation-delay:1s">&</div>
+                <div class="appear-on-load" style="animation-delay:1.6s">Felipe</div>
+            </div>
+            <div class="header-subtitle header appear-on-load" style="animation-delay:2.2s">¡Nuestra boda!</div>
+            <div class="header-text header appear-on-load" style="animation-delay:2.8s">Te elijo hoy y por el resto de mi vida</div>
+        </section>
+
+        <!-- =============================
+         SAVE THE DATE / FECHA
+        ================================== -->
+        <section class="date-hero-section">
+            <div class="date-hero-inner">
+                <div class="date-names">Ana & Felipe</div>
+                <div class="date-big-number">15</div>
+                <div class="date-big-month">AGOSTO</div>
+                <div class="date-big-number">2025</div>
+                <div class="date-label">Save the date</div>
+            </div>
+        </section>
+
+        <section class="container">
+            <img src="./image/flowers2.png" class="countdown-flowers-up" alt="">
+            <div class="countdown-section">
+                <div class="countdown-text">Faltan</div>
+                <div class="countdown-container">
+                    <div class="countdown"><b class="countdown-item" id="days">45</b> <br> <div class="countdown-item-text">Días</div></div>
+                    <div class="countdown"><b class="countdown-item" id="hours">22</b> <br> <div class="countdown-item-text">Horas</div></div>
+                    <div class="countdown"><b class="countdown-item" id="minutes">11</b> <br> <div class="countdown-item-text">Minutos</div></div>
+                    <div class="countdown"><b class="countdown-item" id="seconds">2</b> <br> <div class="countdown-item-text">Segundos</div></div>
+                </div> 
+            </div>
+            <img src="./image/flowers2.png" class="countdown-flowers-down" alt="">
+        </section>
+
+        <!-- =============================
+        CEREMONY CARD
+        ================================== -->
+
+        <section class="card-section">
+            <img src="./image/rings.jpg" alt="" class="card-image">
+            <h2 class="card-title">CEREMONIA</h2>
+            <div class="card-divider"></div>
+            <div class="card-month">AGOSTO</div>
+            <div class="card-date-row">
+                <span class="card-day-label">SÁBADO</span>
+                <span class="card-day-number">15</span>
+                <span class="card-time">2:30 PM</span>
+            </div>
+            <div class="card-year">2026</div>
+            <div class="card-divider"></div>
+            <div class="card-place">Batallón Juan De Dios</div>
+            <button class="card-btn" onclick="openGoogleMaps('ceremony')">¿Cómo llegar?</button>
+        </section>
+
+        <!-- =============================
+        RECEPTION CARD
+        ================================== -->
+        <section class="card-section">
+                <img src="./image/champagne.png" alt="" class="card-image">
+                <h2 class="card-title">RECEPCIÓN</h2>
+                <div class="card-divider"></div>
+                <div class="card-month">AGOSTO</div>
+                <div class="card-date-row">
+                    <span class="card-day-label">SÁBADO</span>
+                    <span class="card-day-number">15</span>
+                    <span class="card-time">5:00 PM</span>
+                </div>
+                <div class="card-year">2026</div>
+                <div class="card-divider"></div>
+                <div class="card-place">Finca la cristalina</div>
+                <button class="card-btn" onclick="openGoogleMaps('reception')">¿Cómo llegar?</button>
+        </section>
+
+        <!-- =============================
+        GALERY
+        ================================== -->
+        <section class="container">
+            <img src="./image/flowers2.png" class="countdown-flowers-up" alt="">
+            <section class="nosotros-section">
+                <div class="nosotros-header">
+                    <h2 class="nosotros-title">Retratos de nuestro amor</h2>
+                    <p class="nosotros-subtitle">La clave es disfrutar cada momento</p>
+                    <img src="./image/camera.png" class="nosotros-icon" alt="cámara">
+                </div>
+                <div class="gallery-slider" id="gallery-slider">
+                    <div class="gallery-track" id="gallery-track">
+                        <div class="gallery-slide">
+                            <img src="./image/nosotros1.png" alt="Nosotros">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="./image/nosotros2.png" alt="Nosotros">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="./image/nosotros3.png" alt="Nosotros">
+                        </div>
+                    </div>
+                    <div class="gallery-dots">
+                        <span class="gallery-dot active" onclick="goToSlide(0)"></span>
+                        <span class="gallery-dot" onclick="goToSlide(1)"></span>
+                        <span class="gallery-dot" onclick="goToSlide(2)"></span>
+                    </div>
+                </div>
+            </section>
+            <img src="./image/flowers2.png" class="countdown-flowers-down" alt="">
+        </section>
+
+        <!-- =============================
+        DRESS CODE
+        ================================== -->
+        <section class="card-section">
+            <img src="./image/dressCode.png" alt="" class="card-image">
+            <h2 class="card-title">Dress Code</h2>
+            <div class="card-divider"></div>
+            <div class="card-place">Una orientación para tu vestimenta</div>
+            <button class="card-btn" onclick="openModal('dress-modal')">Ver más</button>
+        </section>
+
+        <!-- =============================
+        GIFT CARD
+        ================================== -->
+        <section class="card-section">
+            <img src="./image/gift.png" alt="" class="card-image">
+            <h2 class="card-title">Regalos</h2>
+            <div class="card-divider"></div>
+            <div class="card-place">Si quieres darnos algo más que tu hermosa y preciosa compañía....</div>
+            <button class="card-btn" onclick="openModal('gifts-modal')">Ver más</button>
+        </section>
+
+        <!-- =============================
+        CONFIRMATION CARD
+        ================================== -->
+        <section class="container">
+            <img src="./image/flowers2.png" class="countdown-flowers-up" alt="">
+            <section class="confirmation-section">
+                <div class="nosotros-header">
+                    <h2 class="nosotros-title">Confirmación</h2>
+                    <p class="confirmation-subtitle">¿Nos acompañas en este día tan especial?</p>
+                    <img src="./image/confirmation.png" class="confirmation-icon" alt="cámara">
+                </div>
+                <button class="card-btn" onclick="confirmation()">Confirmar Asistencia</button>
+            </section>
+            <img src="./image/flowers2.png" class="countdown-flowers-down" alt="">
+        </section>
+
+        <!-- ============================================================
+            MODALES
+        ============================================================ -->
+
+        <!-- DRESS CODE -->
+        <div class="modal-overlay" id="dress-modal" onclick="closeModalOutside(event, 'dress-modal')">
+            <div class="modal-card">
+                <button class="modal-close" onclick="closeModal('dress-modal')">✕</button>
+                <div class="modal-top-icon">🎀</div>
+                <h3 class="modal-title">Dress Code</h3>
+                <p class="modal-subtitle">Vestimenta Formal</p>
+                <div class="modal-divider"></div>
+                <p class="modal-text">
+                    <strong>Hombres:</strong> Traje formal con corbata<br><br>
+                    <strong>Mujeres:</strong> Vestido largo<br><br>
+                    El <strong>blanco, beige y gris</strong> están reservados para los novios.
+                    Por favor elige <strong>otro color</strong> para tu vestido.<br><br>
+                    Si necesitás inspiración, te compartimos algunas ideas:
+                </p>
+                <a href="#" class="modal-link">Ver enlace de inspiración</a>
+            </div>
+        </div>
+
+        <!-- SUGERIR CANCIÓN -->
+        <div class="modal-overlay" id="music-modal" onclick="closeModalOutside(event, 'music-modal')">
+            <div class="modal-card">
+                <button class="modal-close" onclick="closeModal('music-modal')">✕</button>
+                <div class="modal-top-icon">🎵</div>
+                <h3 class="modal-title">Sugerir Canción</h3>
+                <div class="modal-divider"></div>
+                <div class="modal-form">
+                    <input class="modal-input" type="text" placeholder="Ingrese su nombre completo" id="song-name">
+                    <input class="modal-input" type="text" placeholder="Nombre de la canción y autor" id="song-title">
+                    <input class="modal-input" type="text" placeholder="Link de YouTube (opcional)" id="song-link">
+                    <button class="card-btn modal-submit-btn" onclick="submitSong()">Sugerir Canción</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- REGALOS -->
+        <div class="modal-overlay" id="gifts-modal" onclick="closeModalOutside(event, 'gifts-modal')">
+            <div class="modal-card">
+                <button class="modal-close" onclick="closeModal('gifts-modal')">✕</button>
+                <div class="modal-top-icon">🎁</div>
+                <h3 class="modal-title">Regalos</h3>
+                <div class="modal-divider"></div>
+                <p class="modal-text">
+                    Para quienes deseen hacer un regalo en efectivo, contaremos con sobres disponibles para depositar en el cofre. También pueden contribuir mediante:<br><br>
+                    <strong>• Depósito bancario:</strong><br>
+                    Cuenta: XXXX XXXX XXXX XXXX<br><br>
+                    <strong>• Nequi / Daviplata:</strong><br>
+                    Número: 300 000 0000
+                </p>
+            </div>
+        </div>
+
+        <!-- TIPS Y NOTAS -->
+        <div class="modal-overlay" id="tips-modal" onclick="closeModalOutside(event, 'tips-modal')">
+            <div class="modal-card">
+                <button class="modal-close" onclick="closeModal('tips-modal')">✕</button>
+                <div class="modal-top-icon">📋</div>
+                <h3 class="modal-title">Tips y Notas</h3>
+                <div class="modal-divider"></div>
+                <p class="modal-text">
+                    • ¡Por favor ser puntuales!<br><br>
+                    • Queremos que disfrutes de esta fiesta al máximo, por eso decidimos que sea un evento sólo para adultos.<br><br>
+                    • ¡Confirmar asistencia a la brevedad, antes del 1 de Agosto!<br><br>
+                    • Llevar algo de abrigo para disfrutar de los espacios exteriores.<br><br>
+                    • ¡Olvidarse de todo y a disfrutar!!!
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="image-container">
+        <img class="logo-header" src="images/logo.png" alt="">
+    </div>
+    <div class="container">
+        <div class="invitation-title">¡Estás invitado!</div>
+        <div class="invitation-text">Tú haces parte de nuestra historia, y por eso nos llena de ilusión compartir contigo el día más especial de nuestras vidas</div>
+        <div class="invitation-date">Nuestra boda será el sábado</div>
+        <div class="date-container">
+            <div class="date">12</div>
+            <div class="date middle">Octubre</div>
+            <div class="date">2024</div>
+        </div>
+        <div class="countdown-text">Sólo faltan</div>
+        <div class="countdown-container">
+            <div class="countdown"><b class="countdown-item" id="days">45</b> <br> <div class="countdown-item-text">Días</div></div>
+            <div class="countdown"><b class="countdown-item" id="hours">22</b> <br> <div class="countdown-item-text">Horas</div></div>
+            <div class="countdown"><b class="countdown-item" id="minutes">11</b> <br> <div class="countdown-item-text">Minutos</div></div>
+            <div class="countdown"><b class="countdown-item" id="seconds">2</b> <br> <div class="countdown-item-text">Segundos</div></div>
+        </div>
+        <button class="button calendar" onclick="addEventToCalendar()">
+            <img class="save-the-date" src="images/calendarImg.webp" alt="">
+            Guardar la fecha
+        </button>
+    </div>
+    <div class="branch-container">
+        <img class="third-branch" src="images/ramas.webp" alt="">
+    </div>
+    <div class="container section-with-branch hide" id="ceremony-container">
+        <img class="wedding-rings" src="images/weddingRings.png" alt="">
+        <div class="title ceremony" >CEREMONIA</div>
+        <div class="ceremony-place" > Iglesia de Nuestra Señora de Chiquinquirá <br> El Tablazo - Rionegro <br> <strong>11:30 AM</strong> </div>
+        <button class="button" onclick="openGoogleMaps('1')">Ver ubicación</button>
+    </div>
+    <img class="first-branch" src="images/ramas.webp" alt="">
+    <div class="container section-with-branch hide" id="reception-container">
+        <img class="champaign" src="images/champaign.webp" alt="">
+        <div class="title" >RECEPCIÓN</div>
+        <div class="ceremony-place" >CONTUAMOR Casa Campestre <br> El Tablazo - Rionegro <br> <strong>1:00 PM</strong> </div>
+        <button class="button" onclick="openGoogleMaps()">Ver ubicación</button>
+    </div>
+    <div class="branch-container">
+        <img class="second-branch" src="images/ramas.webp" alt="">
+    </div>
+    <div class="container section-with-branch hide" id="dress-container">
+        <div class="dress-code-icon">
+            <img class="dress-code-img-icon" src="images/dressCode1.webp" alt="">
+            <img class="dress-code-img-icon" src="images/dressCode2.webp" alt="">
+        </div>
+        <div class="title" >CÓDIGO DE VESTIMENTA</div>
+        <div class="ceremony-place" > Hombres: traje formal con corbata <br>Mujeres: vestido largo <br><br><strong>El blanco, beige y gris</strong>,<br>están reservados para los novios <br> Por favor elige <strong>otro color</strong> para tu vestido</div>
+    </div>
+    <div class="container nosotros-section">
+        <div class="nosotros-container">
+            <img class="nosotros-img nosotros-main"  id="nosotros1" src="images/nosotros1.png" alt="">
+            <div class="nosotros-flex" id="nosotros2">
+                <img class="nosotros-img" src="images/nosotros2.png" alt="">
+                <img class="nosotros-img" src="images/nosotros3.png" alt="">
+            </div>
+            <div class="nosotros-flex" id="nosotros3">
+                <img class="nosotros-img" src="images/nosotros4.png" alt="">
+                <img class="nosotros-img" src="images/nosotros5.png" alt="">
+            </div>
+            <img class="nosotros-img nosotros-main"  id="nosotros4" src="images/nosotros6.png" alt="">
+            <div class="nosotros-flex" id="nosotros5">
+                <img class="nosotros-img" src="images/nosotros7.png" alt="">
+                <img class="nosotros-img" src="images/nosotros8.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div class="container hide" id="gift-container">
+        <img class="gift-box" src="images/giftBox.webp" alt="">
+        <div class="title">LLUVIA DE SOBRES</div>
+    </div>
+    <img class="fourth-branch" src="images/ramas.webp" alt="">
+    <div class="container section-with-branch hide" id="attendance-container">
+        <img class="attendance-icon" src="images/attedance.webp" alt="">
+        <div class="title"> CONFIRMAR ASISTENCIA</div>
+        <div class="ceremony-place"><br>Confirma tu asistencia en el siguiente link que te llevará al WhatsApp de José <br><br>Por favor confirmar <strong>antes del 1 de Septiembre</strong>, de lo contrario, entenderemos que no podrás acompañarnos<br><br></div>
+        <button class="button" onclick="confirmation()">CONFIRMAR</button>
+    </div>
+    <div class="container">
+        <div class="invitation-title">¡Te esperamos!</div>
+        <img class="logo-footer"src="images/logo.png" alt="">
+    </div>
+    <div class="container footer">
+        <div class="footer-text">
+            Uno solo puede ser vencido, pero dos pueden resistir. ¡La cuerda de tres hilos no se rompe fácilmente!
+            <br><br>(Eclesiastés 4:12)
+        </div>
+        <img class="footer-img" src="images/footerImg.webp" alt="">
+    </div> -->
+    <script src="script.js"></script>
+</body>
+</html>
