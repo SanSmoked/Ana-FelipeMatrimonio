@@ -74,6 +74,14 @@ body {
     margin: 0;
 }
 
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 .container {
     text-align: center;
     margin-top: 20%;
@@ -418,10 +426,11 @@ body {
 ============================================================ */
 .nosotros-section {
     background-color: var(--cream);
-    height: 570px;
+    height: 590px;
     display: flex;
     flex-direction: column;
     width: 100vw;
+    border-radius: 12px;
 }
 
 .nosotros-header {
@@ -472,7 +481,8 @@ body {
     height: 320px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .gallery-dots {
