@@ -161,7 +161,7 @@ function openGoogleMaps(place) {
         url = 'https://maps.app.goo.gl/pVWuueeQnCx5hbTC9';
     } else {
         //url celebration place
-        url = 'https://maps.app.goo.gl/AjGzozG8gKhnAiXr8';
+        url = 'https://maps.app.goo.gl/REUhkS8azWVyAVFX7';
     }
     window.location.href = url;
 }
