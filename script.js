@@ -11,7 +11,42 @@ document.addEventListener("DOMContentLoaded", function(event) {
         desktopContainer.style.opacity = '1';
     }
 
+    initCardAppearObserver();
 });
+
+function initCardAppearObserver() {
+    const cardIds = ['ceremony', 'reception', 'dress-code', 'gift'];
+    const cards = cardIds
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+    if (!cards.length) return;
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear-card');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        cards.forEach(card => observer.observe(card));
+    } else {
+        const onScroll = () => {
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.85 && rect.bottom > 0) {
+                    card.classList.add('appear-card');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+}
 
 
 // let show1 = show2 = show3 = show4 = show5 = show6 = show7 = show8 = show9 = show10 = show11 = show12 = show13 = show14 = true;

@@ -49,6 +49,11 @@
     animation: fadeInUp 1s ease forwards;
 }
 
+.appear-card {
+    opacity: 0;
+    animation: fadeInUp 3s ease forwards;
+}
+
 .fade-in-section {
     opacity: 0;
     transform: translateY(40px);
@@ -300,6 +305,7 @@ body {
 ============================================================ */
 
 .card-section {
+    opacity: 0;
     background-color: var(--cream);
     width: 80%;
     margin: 0 auto;
