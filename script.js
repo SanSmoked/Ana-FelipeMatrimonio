@@ -158,10 +158,10 @@ function openGoogleMaps(place) {
     var url = '';
     if (place === 'ceremony') {
         // url church
-        url = 'https://share.google/V8WIdjFXLTHxa2UcO';
+        url = 'https://maps.app.goo.gl/pVWuueeQnCx5hbTC9';
     } else {
         //url celebration place
-        url = 'https://maps.app.goo.gl/HqSbQ379gmjXGsgJ83';
+        url = 'https://maps.app.goo.gl/AjGzozG8gKhnAiXr8';
     }
     window.location.href = url;
 }
