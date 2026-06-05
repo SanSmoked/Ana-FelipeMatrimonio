@@ -48,99 +48,6 @@ function initCardAppearObserver() {
     }
 }
 
-
-// let show1 = show2 = show3 = show4 = show5 = show6 = show7 = show8 = show9 = show10 = show11 = show12 = show13 = show14 = true;
-// document.addEventListener("scroll", (event) => {
-
-//     let aux = window.innerHeight*0.75;
-//     let scrollY = window.scrollY + aux;
-//     let scrollYBranches = window.scrollY + window.innerHeight;
-//     var ceremonyContainer = document.getElementById('ceremony-container');
-//     var receptionContainer = document.getElementById('reception-container');
-//     var dressContainer = document.getElementById('dress-container');
-//     var giftContainer = document.getElementById('gift-container');
-//     var attendanceContainer = document.getElementById('attendance-container');
-//     var nosotros1 = document.getElementById('nosotros1');
-//     var nosotros2 = document.getElementById('nosotros2');
-//     var nosotros3 = document.getElementById('nosotros3');
-//     var nosotros4 = document.getElementById('nosotros4');
-//     var nosotros5 = document.getElementById('nosotros5');
-
-//     var branch1 = document.getElementsByClassName('first-branch')[0];
-//     var branch2 = document.getElementsByClassName('second-branch')[0];
-//     var branch3 = document.getElementsByClassName('third-branch')[0];
-//     var branch4 = document.getElementsByClassName('fourth-branch')[0];
-
-
-
-
-//     if(show1 && scrollY > ceremonyContainer.offsetTop){
-//         show1 = false;
-//         ceremonyContainer.classList.add("appear-element");
-//     }
-//     if(show2 && scrollY > receptionContainer.offsetTop){
-//         show2 = false;
-//         receptionContainer.classList.add("appear-element");
-//     }
-//     if(show3 && scrollY > dressContainer.offsetTop){
-//         show3 = false;
-//         dressContainer.classList.add("appear-element");
-//     }
-//     if(show4 && scrollY > giftContainer.offsetTop){
-//         show4 = false;
-//         giftContainer.classList.add("appear-element");
-//     }
-//     if(show5 && scrollY > attendanceContainer.offsetTop){
-//         show5 = false;
-//         attendanceContainer.classList.add("appear-element");
-//     }
-
-//     if(show6 && scrollY > nosotros1.offsetTop){
-//         show6 = false;
-//         nosotros1.classList.add('move-element');
-//     }
-
-//     if(show7 && scrollY > nosotros2.offsetTop){
-//         show7 = false;
-//         nosotros2.classList.add('move-element');
-//     }
-
-//     if(show8 && scrollY > nosotros3.offsetTop){
-//         show8 = false;
-//         nosotros3.classList.add('move-element');
-//     }
-
-//     if(show9 && scrollY > nosotros4.offsetTop){
-//         show9 = false;
-//         nosotros4.classList.add('move-element');
-//     }
-
-//     if(show10 && scrollY > nosotros5.offsetTop){
-//         show10 = false;
-//         nosotros5.classList.add('move-element');
-//     }
-
-//     if(show11 && scrollYBranches > branch2.offsetTop){
-//         show11 = false;
-//         branch2.classList.add('move-branch-left');
-//     }
-
-//     if(show12 && scrollYBranches > branch3.offsetTop){
-//         show12 = false;
-//         branch3.classList.add('move-branch-left');
-//     }
-
-//     if(show13 && scrollYBranches > branch1.offsetTop){
-//         show13 = false;
-//         branch1.classList.add('move-branch-right');
-//     }
-
-//     if(show14 && scrollYBranches > branch4.offsetTop){
-//         show14 = false;
-//         branch4.classList.add('move-branch-right');
-//     }
-// });
-
 function updateDate(){
     var countDownDate = new Date("Aug 15, 2026 15:00:0").getTime();
     var now = new Date().getTime();
@@ -200,7 +107,9 @@ function goToSlide(index) {
     if (!track || index < 0 || index >= slides.length) return;
 
     currentSlide = index;
-    track.style.transform = `translateX(-${100 * currentSlide}%)`;
+    const targetSlide = slides[currentSlide];
+    const offset = targetSlide ? targetSlide.offsetLeft : 0;
+    track.style.transform = `translateX(-${offset}px)`;
 
     dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
 }

@@ -418,10 +418,9 @@ body {
 ============================================================ */
 .nosotros-section {
     background-color: var(--cream);
-    height: 300px;
+    height: 570px;
     display: flex;
     flex-direction: column;
-    padding-top: 75px;
     width: 100vw;
 }
 
@@ -449,6 +448,7 @@ body {
 .nosotros-icon {
     max-width: 2rem;
     opacity: 0.6;
+    padding-top: 10px;
 }
 
 /* Gallery Slider */
@@ -465,11 +465,10 @@ body {
 
 .gallery-slide {
     min-width: 100%;
-    padding: 0 20px;
 }
 
 .gallery-slide img {
-    width: 100%;
+    width: auto;
     height: 320px;
     object-fit: cover;
     border-radius: 12px;
