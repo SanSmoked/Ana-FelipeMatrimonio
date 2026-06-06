@@ -14,8 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <audio id="bg-music" src="./music/background.mp3" preload="auto" loop></audio>
     <div class="intro-overlay" id="intro-overlay">
-        <video id="intro-video" src="./video/video.mp4" autoplay muted playsinline></video>
+        <video id="intro-video" src="./video/video.mp4" playsinline></video>
+        <button id="intro-play-btn" class="intro-play-btn" aria-label="Play">▶</button>
     </div>
     <div class="desktop-view">
         <div class="desktop-container">

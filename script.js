@@ -71,20 +71,32 @@ function initIntroVideo() {
         }, 1000);
     };
 
-    // If autoplay blocked, play when user interacts
-    const tryPlay = () => {
-        const p = video.play();
-        if (p && p.catch) p.catch(() => {});
-    };
+    const bgMusic = document.getElementById('bg-music');
 
     video.addEventListener('ended', finishIntro);
     video.addEventListener('error', finishIntro);
 
-    // Allow skipping intro by click/tap
-    overlay.addEventListener('click', finishIntro);
+    // Remove overlay click-to-skip to prevent accidental dismissals
 
-    // Try to play; on some browsers autoplay with sound is blocked, but video is muted so should be fine
-    tryPlay();
+    // Play button: user must click to start video+music to avoid autoplay restrictions
+    const playBtn = document.getElementById('intro-play-btn');
+    if (playBtn) {
+        playBtn.addEventListener('click', async () => {
+            try {
+                // start background music if present
+                if (bgMusic) {
+                    try { await bgMusic.play(); } catch(e) { /* ignore */ }
+                }
+                // ensure video plays with sound
+                video.muted = false;
+                try { await video.play(); } catch(e) { /* ignore */ }
+                // hide the play button once started
+                playBtn.style.display = 'none';
+            } catch (e) {
+                // nothing
+            }
+        }, { once: true });
+    }
 }
 
 function initFooterObserver() {

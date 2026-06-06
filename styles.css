@@ -701,6 +701,23 @@ html {
     object-fit: cover;
 }
 
+.intro-play-btn {
+    position: absolute;
+    z-index: 100000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 14px 22px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
 /* Hide page content while intro plays, reveal after */
 .invitation-container {
     opacity: 0;
