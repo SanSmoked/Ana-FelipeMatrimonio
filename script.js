@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     initCardAppearObserver();
+    initFooterObserver();
 });
 
 function initCardAppearObserver() {
@@ -47,6 +48,41 @@ function initCardAppearObserver() {
         onScroll();
     }
 }
+
+function initFooterObserver() {
+    const footer = document.getElementById('footer-section');
+    if (!footer) return;
+
+    const ids = ['footer-ana', 'footer-ampersand', 'footer-felipe', 'footer-msg'];
+    const elements = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+    if (!elements.length) return;
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    elements.forEach(el => el.classList.add('appear-on-footer'));
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        observer.observe(footer);
+    } else {
+        const onScroll = () => {
+            const rect = footer.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                elements.forEach(el => el.classList.add('appear-on-footer'));
+                window.removeEventListener('scroll', onScroll);
+            }
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+}
+
 
 function updateDate(){
     var countDownDate = new Date("Aug 15, 2026 15:00:0").getTime();

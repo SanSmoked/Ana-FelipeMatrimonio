@@ -49,6 +49,12 @@
     animation: fadeInUp 1s ease forwards;
 }
 
+.appear-on-footer {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay:1s;
+}
+
 .appear-card {
     opacity: 0;
     animation: fadeInUp 3s ease forwards;
@@ -664,6 +670,10 @@ html {
 .modal-submit-btn {
     margin-top: 6px;
     width: 100%;
+}
+
+#footer-ana , #footer-felipe , #footer-msg, #footer-ampersand {
+    opacity: 0;
 }
 
 
