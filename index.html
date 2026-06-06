@@ -176,7 +176,7 @@
                     <p class="confirmation-subtitle">¿Nos acompañas en este día tan especial?</p>
                     <img src="./image/confirmation.png" class="confirmation-icon" alt="cámara">
                 </div>
-                <button class="card-btn" onclick="confirmation()">Confirmar Asistencia</button>
+                <button class="card-btn" onclick="openModal('confirmation-modal')">Ver más</button>
             </section>
         </section>
 
@@ -210,7 +210,7 @@
                     Por favor elige <strong>otro color</strong> para tu vestido.<br><br>
                     Si necesitás inspiración, te compartimos algunas ideas:
                 </p>
-                <a href="#" class="modal-link">Ver enlace de inspiración</a>
+                <a href="https://pin.it/4VL3DGvsz" class="modal-link">Ver enlace de inspiración</a>
             </div>
         </div>
 
@@ -227,6 +227,26 @@
                     <strong>• Nequi:</strong><br>
                     Número: 304 549 49 67
                 </p>
+            </div>
+        </div>
+
+        <!-- CONFIRMATION -->
+        <div class="modal-overlay" id="confirmation-modal" onclick="closeModalOutside(event, 'confirmation-modal')">
+            <div class="modal-card">
+                <button class="modal-close" onclick="closeModal('confirmation-modal')">✕</button>
+                <h3 class="modal-title">Confirmar Asistencia</h3>
+                <div class="modal-divider"></div>
+                <p class="modal-text">
+                    <strong>Confirma tu asistencias antes del 30 de Julio</strong><br><br>
+                    Requisitos para el ingreso a la ceremonia en el batallón:<br><br>
+                    
+                    • Nombre completo <br>
+                    • Número de cedula <br>
+                    • Placa del carro <br><br>
+           
+                    Solo podrán ingresar las personas y vehículos previamente registrados.
+                </p>
+                <button class="card-btn" onclick="confirmation()">Confirmar Asistencia</button>
             </div>
         </div>
 

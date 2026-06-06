@@ -74,8 +74,8 @@ function openGoogleMaps(place) {
 }
 
 function confirmation() {
-    const phoneNumber = '573136568109';
-    const message = 'Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Luisa%20%26%20José.%20Mi%20nombre%20es:';
+    const phoneNumber = '573045494967';
+    const message = 'Hola.%0AQuiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Ana%20%26%20Felipe:%0A*Nombre:*%0A*Cc:*%0A*Placa:*';
     var url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
     window.location.href = url;
 }
