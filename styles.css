@@ -677,6 +677,36 @@ html {
 }
 
 
+/* Intro video overlay */
+.intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.intro-overlay.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.intro-overlay video {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Hide page content while intro plays, reveal after */
+.invitation-container {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
 
 
 
@@ -1005,4 +1035,5 @@ html {
     max-height: 45%;
     opacity: 20%;
 }
+
 

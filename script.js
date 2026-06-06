@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         desktopContainer.style.opacity = '1';
     }
 
+    initBackgroundMusic();
+    initIntroVideo();
     initCardAppearObserver();
     initFooterObserver();
 });
@@ -47,6 +49,68 @@ function initCardAppearObserver() {
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
     }
+}
+
+function initIntroVideo() {
+    const overlay = document.getElementById('intro-overlay');
+    const video = document.getElementById('intro-video');
+    const invitation = document.querySelector('.invitation-container');
+
+    if (!overlay || !video) {
+        if (invitation) invitation.style.opacity = '1';
+        return;
+    }
+
+    // Ensure page stays hidden while intro plays
+    if (invitation) invitation.style.opacity = '0';
+
+    const finishIntro = () => {
+        overlay.classList.add('fade-out');
+        if (invitation) invitation.style.opacity = '1';
+        setTimeout(() => {
+            if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
+        }, 1000);
+    };
+
+    // If autoplay blocked, play when user interacts
+    const tryPlay = () => {
+        const p = video.play();
+        if (p && p.catch) p.catch(() => {});
+    };
+
+    video.addEventListener('ended', finishIntro);
+    video.addEventListener('error', finishIntro);
+
+    // Allow skipping intro by click/tap
+    overlay.addEventListener('click', finishIntro);
+
+    // Try to play; on some browsers autoplay with sound is blocked, but video is muted so should be fine
+    tryPlay();
+}
+
+function initBackgroundMusic() {
+    const audio = document.getElementById('bg-music');
+    if (!audio) return;
+
+    audio.volume = 0.6;
+    audio.loop = true;
+
+    const tryPlay = () => {
+        const p = audio.play();
+        if (p && p.catch) p.catch(() => {});
+    };
+
+    // Try immediate play; if blocked, resume on first interaction
+    tryPlay();
+
+    const resume = () => {
+        tryPlay();
+        window.removeEventListener('click', resume);
+        window.removeEventListener('touchstart', resume);
+    };
+
+    window.addEventListener('click', resume, { once: true });
+    window.addEventListener('touchstart', resume, { once: true });
 }
 
 function initFooterObserver() {
