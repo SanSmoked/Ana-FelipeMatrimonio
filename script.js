@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         desktopContainer.style.opacity = '1';
     }
 
-    initBackgroundMusic();
     initIntroVideo();
     initCardAppearObserver();
     initFooterObserver();
