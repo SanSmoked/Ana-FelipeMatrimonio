@@ -14,9 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <audio id="bg-music" src="./music/song.mp3" preload="auto" loop></audio>
     <div class="intro-overlay" id="intro-overlay">
-        <video id="intro-video" src="./video/video.mp4" autoplay muted playsinline></video>
+        <video id="intro-video" src="./video/video.mp4" autoplay playsinline></video>
     </div>
     <div class="desktop-view">
         <div class="desktop-container">
@@ -255,98 +254,6 @@
         </div>
 
     </div>
-    <!-- <div class="image-container">
-        <img class="logo-header" src="images/logo.png" alt="">
-    </div>
-    <div class="container">
-        <div class="invitation-title">¡Estás invitado!</div>
-        <div class="invitation-text">Tú haces parte de nuestra historia, y por eso nos llena de ilusión compartir contigo el día más especial de nuestras vidas</div>
-        <div class="invitation-date">Nuestra boda será el sábado</div>
-        <div class="date-container">
-            <div class="date">12</div>
-            <div class="date middle">Octubre</div>
-            <div class="date">2024</div>
-        </div>
-        <div class="countdown-text">Sólo faltan</div>
-        <div class="countdown-container">
-            <div class="countdown"><b class="countdown-item" id="days">45</b> <br> <div class="countdown-item-text">Días</div></div>
-            <div class="countdown"><b class="countdown-item" id="hours">22</b> <br> <div class="countdown-item-text">Horas</div></div>
-            <div class="countdown"><b class="countdown-item" id="minutes">11</b> <br> <div class="countdown-item-text">Minutos</div></div>
-            <div class="countdown"><b class="countdown-item" id="seconds">2</b> <br> <div class="countdown-item-text">Segundos</div></div>
-        </div>
-        <button class="button calendar" onclick="addEventToCalendar()">
-            <img class="save-the-date" src="images/calendarImg.webp" alt="">
-            Guardar la fecha
-        </button>
-    </div>
-    <div class="branch-container">
-        <img class="third-branch" src="images/ramas.webp" alt="">
-    </div>
-    <div class="container section-with-branch hide" id="ceremony-container">
-        <img class="wedding-rings" src="images/weddingRings.png" alt="">
-        <div class="title ceremony" >CEREMONIA</div>
-        <div class="ceremony-place" > Iglesia de Nuestra Señora de Chiquinquirá <br> El Tablazo - Rionegro <br> <strong>11:30 AM</strong> </div>
-        <button class="button" onclick="openGoogleMaps('1')">Ver ubicación</button>
-    </div>
-    <img class="first-branch" src="images/ramas.webp" alt="">
-    <div class="container section-with-branch hide" id="reception-container">
-        <img class="champaign" src="images/champaign.webp" alt="">
-        <div class="title" >RECEPCIÓN</div>
-        <div class="ceremony-place" >CONTUAMOR Casa Campestre <br> El Tablazo - Rionegro <br> <strong>1:00 PM</strong> </div>
-        <button class="button" onclick="openGoogleMaps()">Ver ubicación</button>
-    </div>
-    <div class="branch-container">
-        <img class="second-branch" src="images/ramas.webp" alt="">
-    </div>
-    <div class="container section-with-branch hide" id="dress-container">
-        <div class="dress-code-icon">
-            <img class="dress-code-img-icon" src="images/dressCode1.webp" alt="">
-            <img class="dress-code-img-icon" src="images/dressCode2.webp" alt="">
-        </div>
-        <div class="title" >CÓDIGO DE VESTIMENTA</div>
-        <div class="ceremony-place" > Hombres: traje formal con corbata <br>Mujeres: vestido largo <br><br><strong>El blanco, beige y gris</strong>,<br>están reservados para los novios <br> Por favor elige <strong>otro color</strong> para tu vestido</div>
-    </div>
-    <div class="container nosotros-section">
-        <div class="nosotros-container">
-            <img class="nosotros-img nosotros-main"  id="nosotros1" src="images/nosotros1.png" alt="">
-            <div class="nosotros-flex" id="nosotros2">
-                <img class="nosotros-img" src="images/nosotros2.png" alt="">
-                <img class="nosotros-img" src="images/nosotros3.png" alt="">
-            </div>
-            <div class="nosotros-flex" id="nosotros3">
-                <img class="nosotros-img" src="images/nosotros4.png" alt="">
-                <img class="nosotros-img" src="images/nosotros5.png" alt="">
-            </div>
-            <img class="nosotros-img nosotros-main"  id="nosotros4" src="images/nosotros6.png" alt="">
-            <div class="nosotros-flex" id="nosotros5">
-                <img class="nosotros-img" src="images/nosotros7.png" alt="">
-                <img class="nosotros-img" src="images/nosotros8.png" alt="">
-            </div>
-        </div>
-
-    </div>
-    <div class="container hide" id="gift-container">
-        <img class="gift-box" src="images/giftBox.webp" alt="">
-        <div class="title">LLUVIA DE SOBRES</div>
-    </div>
-    <img class="fourth-branch" src="images/ramas.webp" alt="">
-    <div class="container section-with-branch hide" id="attendance-container">
-        <img class="attendance-icon" src="images/attedance.webp" alt="">
-        <div class="title"> CONFIRMAR ASISTENCIA</div>
-        <div class="ceremony-place"><br>Confirma tu asistencia en el siguiente link que te llevará al WhatsApp de José <br><br>Por favor confirmar <strong>antes del 1 de Septiembre</strong>, de lo contrario, entenderemos que no podrás acompañarnos<br><br></div>
-        <button class="button" onclick="confirmation()">CONFIRMAR</button>
-    </div>
-    <div class="container">
-        <div class="invitation-title">¡Te esperamos!</div>
-        <img class="logo-footer"src="images/logo.png" alt="">
-    </div>
-    <div class="container footer">
-        <div class="footer-text">
-            Uno solo puede ser vencido, pero dos pueden resistir. ¡La cuerda de tres hilos no se rompe fácilmente!
-            <br><br>(Eclesiastés 4:12)
-        </div>
-        <img class="footer-img" src="images/footerImg.webp" alt="">
-    </div> -->
     <script src="script.js"></script>
 </body>
 </html>

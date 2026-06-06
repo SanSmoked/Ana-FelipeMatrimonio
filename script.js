@@ -88,31 +88,6 @@ function initIntroVideo() {
     tryPlay();
 }
 
-function initBackgroundMusic() {
-    const audio = document.getElementById('bg-music');
-    if (!audio) return;
-
-    audio.volume = 0.6;
-    audio.loop = true;
-
-    const tryPlay = () => {
-        const p = audio.play();
-        if (p && p.catch) p.catch(() => {});
-    };
-
-    // Try immediate play; if blocked, resume on first interaction
-    tryPlay();
-
-    const resume = () => {
-        tryPlay();
-        window.removeEventListener('click', resume);
-        window.removeEventListener('touchstart', resume);
-    };
-
-    window.addEventListener('click', resume, { once: true });
-    window.addEventListener('touchstart', resume, { once: true });
-}
-
 function initFooterObserver() {
     const footer = document.getElementById('footer-section');
     if (!footer) return;
