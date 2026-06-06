@@ -66,6 +66,13 @@ function initIntroVideo() {
     const finishIntro = () => {
         overlay.classList.add('fade-out');
         if (invitation) invitation.style.opacity = '1';
+
+        const headerIds = ['header-ana', 'header-ampersand', 'header-felipe', 'header-msg1', 'header-msg2'];
+        headerIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.classList.add('appear-on-load');
+        });
+
         setTimeout(() => {
             if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
         }, 1000);
